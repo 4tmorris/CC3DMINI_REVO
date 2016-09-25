@@ -69,11 +69,10 @@
 #define MICROPY_HW_USRSW_PRESSED    (0)
 
 // Revo has 2 LEDs
-#define MICROPY_HW_LED1             (pin_B5) // blue?
-#define MICROPY_HW_LED2             (pin_B4) // green?
-#define MICROPY_HW_LED3             (pin_B5) // =led1
-#define MICROPY_HW_LED4             (pin_B5) // =led1
-#define MICROPY_HW_LED4_PWM         { TIM3, 3, TIM_CHANNEL_2, GPIO_AF2_TIM3 }
+#define MICROPY_HW_LED1             (pin_B5) // blue
+#define MICROPY_HW_LED2             (pin_B4) // green
+#define MICROPY_HW_LED1_PWM         { TIM3, 3, TIM_CHANNEL_2, GPIO_AF2_TIM3 }
+#define MICROPY_HW_LED2_PWM         { TIM3, 3, TIM_CHANNEL_1, GPIO_AF2_TIM3 }
 #define MICROPY_HW_LED_INVERTED     (1)
 #define MICROPY_HW_LED_OTYPE        (GPIO_MODE_OUTPUT_PP)
 #define MICROPY_HW_LED_ON(pin)      (pin->gpio->BSRRH = pin->pin_mask)
