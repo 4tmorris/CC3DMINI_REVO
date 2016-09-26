@@ -16,6 +16,9 @@
 #define MICROPY_HW_ENABLE_DAC       (0)
 #define MICROPY_HW_ENABLE_CAN       (0)
 
+void CC3DMINI_REVO_board_early_init(void);
+#define MICROPY_BOARD_EARLY_INIT    CC3DMINI_REVO_board_early_init
+
 // HSE is 8MHz
 #define MICROPY_HW_CLK_PLLM (8)
 #define MICROPY_HW_CLK_PLLN (336)
@@ -41,14 +44,14 @@
 #define MICROPY_HW_UART6_PORT (GPIOC)
 #define MICROPY_HW_UART6_PINS (GPIO_PIN_6 | GPIO_PIN_7)
 
-// I2C busses
+// I2C buses
 //I2C1 used for onboard Magnetometer(HMC5883) and Barometer(MS5611)
 #define MICROPY_HW_I2C1_SCL (pin_B8)
 #define MICROPY_HW_I2C1_SDA (pin_B9)
 #define MICROPY_HW_I2C2_SCL (pin_B10)
 #define MICROPY_HW_I2C2_SDA (pin_B11)
 
-// SPI busses
+// SPI buses
 //SPI1 used for onboard Accelerometer/Gyroscope (MPU-6000)
 #define MICROPY_HW_SPI1_NSS  (pin_A4) // MPU-6000
 #define MICROPY_HW_SPI1_SCK  (pin_A5)
